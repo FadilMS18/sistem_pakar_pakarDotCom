@@ -20,7 +20,7 @@ a{
 body {
     margin: 0;
     font-family: outfit, "Poppins", sans-serif;
-    background: linear-gradient(to right bottom, #ffefd5, #ffe5a3);
+    background: linear-gradient(to right bottom, rgba(7, 9, 25),rgba(12, 16, 27));
     color: #333;
 }
 
@@ -61,6 +61,7 @@ nav a:hover {
 /* HERO SECTION */
 .hero {
     background: url(./assets/IMG/Hero-BG.jpg);
+    background-size: cover;
     position: relative;
     height: 100vh;
     display: flex;
@@ -123,6 +124,7 @@ nav a:hover {
 
 #about p{
     text-align:center;
+    color: white;
     max-width:750px; 
     margin:auto; 
     font-size:17px;
@@ -151,7 +153,9 @@ nav a:hover {
     font-size: 32px;
     text-align: center;
     margin-bottom: 40px;
-    color: #ff6a00;
+    background: linear-gradient(90deg, #ffa638, #ff6f1c);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .fitur-grid {
@@ -163,25 +167,30 @@ nav a:hover {
 .card {
     padding: 25px;
     border-radius: 15px;
-    background: #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: rgba(25, 33, 56);
+    box-shadow: 0 0px 15px rgba(255, 255, 255, .05);
     transition: 0.3s;
+    color: white;
+    cursor: pointer;
 }
 
 .card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0px 15px rgba(255, 255, 255, .12);
 }
 
 .card h4 {
     margin-top: 0;
-    color: #ff6a00;
+    background: linear-gradient(90deg, #ffa638, #ff6f1c);
+    -webkit-background-clip: text;
+    color: transparent;
     font-size: 20px;
 }
 
 /* FOOTER */
 footer {
-    background: linear-gradient(90deg, #ff8c00, #ff6a00);
+    background: rgb(17, 22, 38);
+    box-shadow: 0 0 12px rgba(255, 255, 255, .05);
     text-align: center;
     padding: 20px;
     color: white;
