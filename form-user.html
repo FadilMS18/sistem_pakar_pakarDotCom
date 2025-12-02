@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Data Pengguna — Sistem Pakar</title>
+    <link rel="stylesheet" href="./form-user.css">
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #fff4c2, #ffd68a);
+        color: #333;
+        overflow-x: hidden;
+      }
+
+      header {
+        padding: 20px 40px;
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(12px);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: bold;
+        background: linear-gradient(90deg, #ffa200, #ff7a00);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 130px auto;
+        background: #fff;
+        padding: 40px;
+        border-radius: 18px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        animation: fadeIn 0.9s ease;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 26px;
+        color: #ff7a00;
+        font-weight: 700;
+      }
+
+      label {
+        font-weight: 600;
+        margin-top: 12px;
+        display: block;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        margin-top: 6px;
+        border-radius: 10px;
+        border: 2px solid #ffcf75;
+        font-size: 15px;
+        outline: none;
+        transition: 0.3s;
+      }
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #ff9500;
+        box-shadow: 0 0 6px rgba(255, 149, 0, 0.4);
+      }
+
+      textarea {
+        height: 120px;
+        resize: none;
+      }
+
+      button {
+        width: 100%;
+        padding: 14px;
+        margin-top: 25px;
+        background: linear-gradient(90deg, #ffa600, #ff7a00);
+        border: none;
+        color: white;
+        font-size: 17px;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.3s;
+        font-weight: 600;
+      }
+      button:hover {
+        transform: translateY(-3px);
+        background: linear-gradient(90deg, #ff8c00, #ff5e00);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(25px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+    <h1>Sistem Pakar Komputer</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#fitur">Fitur</a>
+      <a href="#about">Tentang</a>
+    </nav>
+  </header>
+
+    <div class="container">
+      <h2>Isi Data Sebelum Memulai Diagnosa</h2>
+
+      <form>
+        <label>Nama Lengkap</label>
+        <input type="text" placeholder="Masukkan nama Anda" required />
+
+        <label>Usia</label>
+        <input type="number" placeholder="Contoh: 20" required />
+
+        <label>Jenis Laptop / Komputer</label>
+        <input
+          type="text"
+          placeholder="Contoh: Asus ROG, Acer Aspire, Lenovo IdeaPad"
+          required
+        />
+
+        <label>Alasan Menggunakan Sistem Pakar Ini</label>
+        <textarea
+          placeholder="Jelaskan permasalahan atau alasan Anda..."
+          required
+        ></textarea>
+
+        <button type="submit">Lanjut ke Diagnosa</button>
+      </form>
+    </div>
+  </body>
+</html>
