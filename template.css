@@ -1,0 +1,166 @@
+:root{
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: outfit;
+    src: url(./Outfit/Outfit-VariableFont_wght.ttf);
+}
+
+body {
+    margin: 0;
+    font-family: outfit, "Poppins", sans-serif;
+    background: linear-gradient(135deg, #ffefd5, #ffe5a3);
+    color: #333;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.45);
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ff8c00, #ff5e00);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff6a00;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+    animation: fadeIn 1s ease;
+}
+
+.hero h2 {
+    font-size: 48px;
+    max-width: 900px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #ff9100, #ff5e00);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 650px;
+    opacity: 0.8;
+}
+
+.hero button {
+    margin-top: 30px;
+    padding: 14px 28px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #ff7b00;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    transform: translateY(-4px);
+    background: #ff5e00;
+}
+
+/* SCROLL ANIMATION */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+[data-animate].active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* SECTION FITUR */
+.section {
+    padding: 100px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section h3 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ff6a00;
+}
+
+.fitur-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    padding: 25px;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h4 {
+    margin-top: 0;
+    color: #ff6a00;
+    font-size: 20px;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(90deg, #ff8c00, #ff6a00);
+    text-align: center;
+    padding: 20px;
+    color: white;
+    margin-top: 50px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

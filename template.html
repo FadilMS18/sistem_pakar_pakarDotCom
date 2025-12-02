@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page Sistem Pakar Kerusakan Komputer</title>
+  <link rel="stylesheet" href="./template.css">
+</head>
+<body>
+  <header>
+    <h1>Sistem Pakar Komputer</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#fitur">Fitur</a>
+      <a href="#about">Tentang</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <h2>Deteksi Kerusakan Komputer Secara Cerdas & Cepat</h2>
+    <p>Website sistem pakar berbasis Forward Chaining yang dirancang modern, ringan, interaktif, dan dibuat menggunakan native JavaScript tanpa framework apa pun.</p>
+    <button>Mulai Diagnosa</button>
+  </section>
+
+  <!-- TENTANG -->
+  <section class="section" id="about">
+    <h3 data-animate>Tentang Sistem</h3>
+    <p data-animate style="text-align:center; max-width:750px; margin:auto; font-size:17px;">
+      Sistem pakar ini dibuat untuk membantu pengguna mendiagnosa kerusakan komputer secara mandiri.
+      Dengan memasukkan beberapa gejala, sistem akan memberikan analisis awal menggunakan metode Forward Chaining.
+      Cocok digunakan untuk mahasiswa, teknisi pemula, maupun pengguna umum.
+    </p>
+  </section>
+
+  <!-- FITUR -->
+  <section class="section" id="fitur">
+    <h3 data-animate>Fitur Unggulan</h3>
+    <div class="fitur-grid">
+      <div class="card" data-animate>
+        <h4>UI Modern & Elegan</h4>
+        <p>Tampilan sederhana, bersih, dan menggunakan warna-warna cerah agar nyaman digunakan.</p>
+      </div>
+      <div class="card" data-animate>
+        <h4>Animasi Lembut</h4>
+        <p>Scroll animation memberikan pengalaman interaktif dan lebih hidup.</p>
+      </div>
+      <div class="card" data-animate>
+        <h4>Forward Chaining</h4>
+        <p>Metode pelacakan fakta untuk diagnosa kerusakan komputer secara akurat.</p>
+      </div>
+      <div class="card" data-animate>
+        <h4>Tanpa Framework</h4>
+        <p>Di-build hanya dengan native JavaScript, HTML, dan CSS.</p>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <footer>
+    © 2025 Sistem Pakar Kerusakan Komputer — All Rights Reserved.
+  </footer>
+
+  <script>
+    // Scroll Animation Observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('active');
+      })
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
