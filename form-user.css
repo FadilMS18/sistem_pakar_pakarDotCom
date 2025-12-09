@@ -9,10 +9,23 @@ a {
 }
 
 body {
-    margin: 0;
     font-family: outfit, "Poppins", sans-serif;
     background: linear-gradient(to right bottom, rgba(7, 9, 25), rgba(12, 16, 27));
     position: relative;
+    min-height: 100vh;
+    padding: 1px;
+}
+
+.texture-bg{
+    background: url(./assets/IMG/texture-bg-paint-removebg-preview.png);
+    background-size: cover;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    opacity: .03;
 }
 
 /* HEADER */
@@ -129,25 +142,6 @@ button:hover {
     transform: translateY(-3px);
     background: #ff5e00;
     box-shadow: 0 0 12px rgba(255, 255, 255, .25);
-}
-
-.blob{
-    position: absolute;
-    top: 0;
-    height: 250px;
-    width: 350px;
-    border-radius: 10px ;
-    z-index: -1;
-    
-}
-
-.blob1{
-    left:10%;
-    top:7%;
-    background: rgba(18, 18, 50);
-    /* background: linear-gradient(90deg, rgba(27, 33, 62, .3), rgba(38, 36, 67, .3));; */
-    border-radius: 19% 81% 49% 51% / 56% 47% 53% 44%  ;
-    filter: blur(10px);
 }
 
 @keyframes fadeIn {
