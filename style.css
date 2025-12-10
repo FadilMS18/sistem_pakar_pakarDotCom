@@ -1,6 +1,9 @@
+html{
+    overscroll-behavior: none;
+}
+
 :root{
-    scroll-behavior: smooth;
-    
+    scroll-behavior: smooth;   
 }
 
 @font-face {
