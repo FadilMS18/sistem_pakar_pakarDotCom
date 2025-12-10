@@ -21,6 +21,19 @@ body {
     margin: 0;
     font-family: outfit, "Poppins", sans-serif;
     background: linear-gradient(to right bottom, rgba(7, 9, 25),rgba(12, 16, 27));
+    position: relative;
+}
+
+.texture-bg-home{
+    background: url(./assets/IMG/brush_grungy_wall_textured_background.png);
+    background-size: cover;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    opacity: .05;
 }
 
 /* HEADER */
@@ -126,7 +139,8 @@ nav a:hover {
     color: white;
     max-width:750px; 
     margin:auto; 
-    font-size:17px;
+    line-height: 2rem;
+    font-size:18px;
 }
 
 /* SCROLL ANIMATION */
@@ -188,7 +202,7 @@ nav a:hover {
 
 /* FOOTER */
 footer {
-    background: rgb(17, 22, 38);
+    background: rgba(17, 22, 38, 1);
     box-shadow: 0 0 12px rgba(255, 255, 255, .05);
     text-align: center;
     padding: 20px;

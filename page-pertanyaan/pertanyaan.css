@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: outfit;
+    src: url(./../Outfit/Outfit-VariableFont_wght.ttf);
+}
+
+body {
+    font-family: outfit, "Poppins", sans-serif;
+    background: linear-gradient(to right bottom, rgba(7, 9, 25), rgba(12, 16, 27));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+}
+
+.texture-bg-pertanyaan {
+    background: url(./../assets/IMG/brush_grungy_wall_textured_background.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    opacity: .08;
+}
+
+
+
+.card {
+    width: 420px;
+    background: linear-gradient(to right bottom, rgba(25, 33, 56), rgb(27, 43, 94)) ;
+    box-shadow: 0 0 15px rgba(255, 255, 255, .1);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    margin: 0 0 15px 0;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    background: linear-gradient(90deg, #ffa638, #ff6f1c);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#questionBox {
+    text-align: center;
+    font-size: 18px;
+    margin: 25px 0;
+    line-height: 1.6;
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 12px 35px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.25s;
+    box-shadow: 0 0 12px rgba(255, 255, 255, .1);
+    margin-bottom: 15px;
+}
+
+.btn-yes {
+    background: #ff7b00;
+    color: white;
+}
+
+.btn-yes:hover {
+    background: #ffa200;
+    transform: scale(1.06);
+}
+
+.btn-no {
+    background: #ff4800;
+    color: white;
+}
+
+.btn-no:hover {
+    background: #ff3000;
+    transform: scale(1.06);
+}
+
+.progress {
+    width: 100%;
+    height: 8px;
+    margin-top: 20px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #00ffcc, #06b6d4);
+    transition: width 0.4s ease;
+}

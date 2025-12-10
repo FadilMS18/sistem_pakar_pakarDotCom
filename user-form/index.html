@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Data Pengguna — Sistem Pakar</title>
+    <link rel="stylesheet" href="./form-user.css" />
+  </head>
+  <body>
+    <div class="texture-bg"></div>
+    <header>
+      <h1>Pakar Dotcom</h1>
+      <nav>
+        <a href="./../">Home</a>
+        <a href="./../index.html/#about">Tentang</a>
+        <a href="./../index.html/#fitur">Fitur</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h2>Isi Data Sebelum Memulai Diagnosa</h2>
+
+      <form>
+        <label>Nama Lengkap</label>
+        <input type="text" placeholder="Masukkan Nama Anda Disini" required />
+
+        <label>Usia</label>
+        <input type="number" placeholder="Contoh: 20" required />
+
+        <label>Jenis Laptop / Komputer</label>
+        <input
+          type="text"
+          placeholder="Contoh: Asus ROG, Acer Aspire, Lenovo IdeaPad"
+          required
+        />
+
+        <label>Alasan Menggunakan Sistem Pakar Ini</label>
+        <textarea
+          placeholder="Jelaskan permasalahan atau alasan Anda..."
+          required
+        ></textarea>
+
+        <button type="submit">Lanjut ke Diagnosa</button>
+      </form>
+    </div>
+  </body>
+</html>

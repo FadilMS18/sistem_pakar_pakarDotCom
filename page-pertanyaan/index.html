@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Pakar - Tanya Gejala</title>
+    <link rel="stylesheet" href="pertanyaan.css" />
+    <script src="./pertanyaan.js" defer></script>
+  </head>
+  <body>
+    <div class="texture-bg-pertanyaan"></div>
+    <div class="card">
+      <h2>Diagnosis Kerusakan Komputer</h2>
+
+      <div id="questionBox">Loading...</div>
+
+      <div class="btn-container">
+        <button class="btn-yes" onclick="answer('yes')">Iya</button>
+        <button class="btn-no" onclick="answer('no')">Tidak</button>
+      </div>
+      <div class="progress">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </div>
+  </body>
+</html>
