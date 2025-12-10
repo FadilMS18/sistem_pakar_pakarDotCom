@@ -1,79 +1,138 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Landing Page Sistem Pakar Kerusakan Komputer</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <div class="texture-bg-home"></div>
-  <header>
-    <h1>Pakar Dotcom</h1>
-    <nav>
-      <a href="./page-pertanyaan/">Home</a>
-      <a href="#about">Tentang</a>
-      <a href="#fitur">Fitur</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page Sistem Pakar Kerusakan Komputer</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="texture-bg-home"></div>
+    <header>
+      <h1>Pakar Dotcom</h1>
+      <nav>
+        <a href="./page-pertanyaan/">Home</a>
+        <a href="#about">Tentang</a>
+        <a href="#fitur">Fitur</a>
+      </nav>
+    </header>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div id="black-overlay"></div>
-    <h2>Deteksi Kerusakan Komputer Secara Cerdas & Cepat</h2>
-    <p>Website sistem pakar berbasis Forward Chaining yang dirancang menggunakan bahasa native HTML, CSS JavaScript tanpa framework & library apa pun.</p>
-    <button> <a href="./page-pertanyaan/">Mulai Diagnosa</a></button>
-  </section>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div id="black-overlay"></div>
+      <h2>Deteksi Kerusakan Komputer Secara Cerdas & Cepat</h2>
+      <p>
+        Website sistem pakar berbasis Forward Chaining yang dirancang
+        menggunakan bahasa native HTML, CSS JavaScript tanpa framework & library
+        apa pun.
+      </p>
+      <button><a href="./page-pertanyaan/">Mulai Diagnosa</a></button>
+    </section>
 
-  <!-- TENTANG -->
-  <section class="section" id="about">
-    <h3 data-animate>Tentang Sistem</h3>
-    <p data-animate>
-      Sistem pakar ini dibuat untuk membantu pengguna mendiagnosa kerusakan komputer secara mandiri.
-      Dengan memasukkan beberapa gejala, sistem akan memberikan analisis awal menggunakan metode Forward Chaining.
-      Cocok digunakan untuk mahasiswa, teknisi pemula, maupun pengguna umum.
-    </p>
-  </section>
+    <!-- TENTANG -->
+    <section class="section" id="about">
+      <h3 data-animate>Tentang Sistem</h3>
+      <p data-animate>
+        Sistem pakar ini dibuat untuk membantu pengguna mendiagnosa kerusakan
+        komputer secara mandiri. Dengan memasukkan beberapa gejala, sistem akan
+        memberikan analisis awal menggunakan metode Forward Chaining. Perlu
+        diingat bahwa informasi yang diberikan disini hanya diagnosa awal dan
+        tidak 100% benar, untuk kepastian data harap konsultasi ke ahlii yang
+        sebenarnya
+      </p>
+    </section>
 
-  <!-- FITUR -->
-  <section class="section" id="fitur">
-    <h3 data-animate>Fitur Unggulan</h3>
-    <div class="fitur-grid">
-      <div class="card" data-animate>
-        <h4>UI Modern & Elegan</h4>
-        <p>Tampilan sederhana, bersih, dan menggunakan warna-warna cerah agar nyaman digunakan.</p>
+    <!-- FITUR -->
+    <section class="section" id="fitur">
+      <h3 data-animate>Fitur Unggulan</h3>
+      <div class="fitur-grid">
+        <div class="card" data-animate>
+          <h4>Alat Pembuatan</h4>
+          <p>
+            Di-build hanya dengan native JavaScript, HTML, dan CSS serta github
+            untuk version control systemnya.
+          </p>
+        </div>
+        <div class="card" data-animate>
+          <h4>UI Simple & Modern</h4>
+          <p>
+            Tampilan sederhana, bersih, dan menggunakan warna-warna tema gelap
+            agar nyaman untuk dilihat dan dioperasikan.
+          </p>
+        </div>
+        <div class="card" data-animate>
+          <h4>Scroll Animation</h4>
+          <p>
+            Scroll animation memberikan pengalaman interaktif dan lebih hidup.
+            Dimana saat kita mengscroll ke sebuah elemen maka elemen tersebut
+            akan ada entrance masuknya
+          </p>
+        </div>
+        <div class="card" data-animate>
+          <h4>Forward Chaining</h4>
+          <p>
+            metode penalaran yang dimulai dari fakta atau data yang ada,
+            kemudian mencocokkan fakta tersebut dengan aturan IF-THEN
+          </p>
+        </div>
       </div>
-      <div class="card" data-animate>
-        <h4>Animasi Lembut</h4>
-        <p>Scroll animation memberikan pengalaman interaktif dan lebih hidup.</p>
+    </section>
+
+    <footer data-animate="" id="footer">
+      <div id="footer-description">
+        <h2>Pakar Dotcom</h2>
+        <p id="tagline">Deteksi Kerusakan Komputer Cerdas & Cepat</p>
+        <p id="desc">
+          Website sistem pakar berbasis Forward Chaining yang dirancang
+          menggunakan bahasa native HTML, CSS JavaScript tanpa framework &
+          library apa pun.
+        </p>
+        <p>
+          <a href="https://github.com/FadilMS18/sistem_pakar_pakarDotCom"
+            >Klik Disini Untuk Source Kode</a
+          >
+        </p>
       </div>
-      <div class="card" data-animate>
-        <h4>Forward Chaining</h4>
-        <p>Metode pelacakan fakta untuk diagnosa kerusakan komputer secara akurat.</p>
+
+      <div id="footer-navigation-menu">
+        <h3>Navigation Menu</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="./index.html#about">About Us</a></li>
+          <li><a href="./index.html#fitur">Feature</a></li>
+          <li><a href="./user-form">Mulai Konsultasi</a></li>
+          <li>
+            <a href="./page-pertanyaan/" target="_blank"
+              >Pertanyaan</a
+            >
+          </li>
+        </ul>
       </div>
-      <div class="card" data-animate>
-        <h4>Tanpa Framework</h4>
-        <p>Di-build hanya dengan native JavaScript, HTML, dan CSS.</p>
+      <div id="footer-navigation-menu">
+        <h3>Kelompok 2</h3>
+        <ul>
+          <li><a href="#">Muh.Fadhil Malik Sukardi</a></li>
+          <li><a href="#">Sukmayani</a></li>
+          <li><a href="#">Rifqa Wulandari</a></li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </footer>
 
-  
+    <script>
+      // Scroll Animation Observer
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("active");
+          });
+        },
+        { threshold: 0.2 }
+      );
 
-  <footer>
-    © 2025 Sistem Pakar Kerusakan Komputer By Kelompok 2 — All Rights Reserved.
-  </footer>
-
-  <script>
-    // Scroll Animation Observer
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('active');
-      })
-    }, { threshold: 0.2 });
-
-    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
-  </script>
-</body>
+      document
+        .querySelectorAll("[data-animate]")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
 </html>
 <!-- Make a question page where user will input yes or now answer  -->

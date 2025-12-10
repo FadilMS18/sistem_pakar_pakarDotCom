@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hasil Diagnosa - Sistem Pakar</title>
+  <link rel="stylesheet" href="hasil-dagnosa.css">
+</head>
+<body>
+
+<div class="result-card">
+  <h1>Hasil Diagnosa</h1>
+  <p class="summary">Berdasarkan jawaban Anda, sistem mendeteksi kemungkinan kerusakan berikut:</p>
+
+  <div class="diagnosis-box">
+    <div class="title">Kemungkinan Masalah: <span id="problem">Loading...</span></div>
+    <p class="desc" id="description">Sistem sedang memproses hasil diagnosa...</p>
+  </div>
+
+  <div class="diagnosis-box">
+    <div class="title">Solusi yang Disarankan</div>
+    <p class="desc" id="solution">Menampilkan solusi berdasarkan hasil analisis...</p>
+  </div>
+
+  <div class="btn-container">
+    <button class="btn-again" onclick="location.href='diagnosa.html'">Diagnosa Ulang</button>
+    <button class="btn-home" onclick="location.href='index.html'">Kembali ke Home</button>
+  </div>
+</div>
+
+<script>
+  // Contoh data hasil (nanti diganti dari logika forward chaining)
+  const hasilDiagnosa = {
+    problem: "Kerusakan RAM atau RAM Tidak Terdeteksi",
+    description:
+      "Komputer mengalami gejala layar tidak tampil, beep berulang, atau restart tiba-tiba. Ini biasanya disebabkan oleh RAM yang kotor, longgar, atau rusak.",
+    solution:
+      "Coba bersihkan RAM menggunakan penghapus karet pada pin kuning, pastikan RAM terpasang dengan benar, atau coba gunakan slot RAM yang lain. Jika tetap bermasalah, disarankan mengganti RAM baru."
+  };
+
+  // Menampilkan hasil ke page
+  document.getElementById("problem").textContent = hasilDiagnosa.problem;
+  document.getElementById("description").textContent = hasilDiagnosa.description;
+  document.getElementById("solution").textContent = hasilDiagnosa.solution;
+</script>
+
+</body>
+</html>
