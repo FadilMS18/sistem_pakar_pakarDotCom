@@ -1,26 +1,62 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sistem Pakar - Tanya Gejala</title>
-    <link rel="stylesheet" href="pertanyaan.css" />
-    <script src="./pertanyaan.js" defer></script>
-  </head>
-  <body>
-    <div class="texture-bg-pertanyaan"></div>
-    <div class="card">
-      <h2>Diagnosis Kerusakan Komputer</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Pakar - Diagnosa</title>
+    <link rel="stylesheet" href="./pertanyaan-style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="./../index.html" class="navbar-brand">
+                <span class="navbar-logo">🔬</span>
+                <span class="navbar-title">Pakar Dotcom</span>
+            </a>
+            
+            <button class="navbar-toggle" id="navbar-toggle">
+                ☰
+            </button>
+            
+            <ul class="navbar-menu" id="navbar-menu">
+                <li class="navbar-item">
+                    <a href="./../index.html#about" class="navbar-link">
+                        🏠 Home
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">
+                        📋 Tentang
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="./../index.html#fitur" class="navbar-link">
+                        🩺 Fitur
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-      <div id="questionBox">Loading...</div>
+    <div class="container">
+        <header>
+            <div class="logo">🔬 Sistem Pakar</div>
+            <div class="subtitle">Diagnosa Berbasis Forward Chaining</div>
+        </header>
 
-      <div class="btn-container">
-        <button class="btn-yes" onclick="answer('yes')">Iya</button>
-        <button class="btn-no" onclick="answer('no')">Tidak</button>
-      </div>
-      <div class="progress">
-        <div class="progress-bar" id="progressBar"></div>
-      </div>
+        <div class="progress-container">
+            <div class="progress-info">
+                <span>Progress</span>
+                <span id="progress-text">0 dari 0</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <div id="question-container"></div>
     </div>
-  </body>
+    <script src="./pertanyaan2.js" ></script>
+</body>
 </html>

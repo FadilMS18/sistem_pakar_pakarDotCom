@@ -8,40 +8,65 @@
   </head>
   <body>
     <div class="texture-bg"></div>
-    <header>
-      <h1>Pakar Dotcom</h1>
-      <nav>
-        <a href="./../">Home</a>
-        <a href="./../index.html/#about">Tentang</a>
-        <a href="./../index.html/#fitur">Fitur</a>
-      </nav>
-    </header>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="./../index.html" class="navbar-brand">
+                <span class="navbar-logo">🔬</span>
+                <span class="navbar-title">Pakar Dotcom</span>
+            </a>
+            
+            <button class="navbar-toggle" id="navbar-toggle">
+                ☰
+            </button>
+            
+            <ul class="navbar-menu" id="navbar-menu">
+                <li class="navbar-item">
+                    <a href="./../index.html#about" class="navbar-link">
+                        🏠 Home
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">
+                        📋 Tentang
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="./../index.html#fitur" class="navbar-link">
+                        🩺 Fitur
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="container">
       <h2>Isi Data Sebelum Memulai Diagnosa</h2>
 
-      <form>
+      <form id="formPengunjung">
         <label>Nama Lengkap</label>
-        <input type="text" placeholder="Masukkan Nama Anda Disini" required />
+        <input type="text" name="nama" placeholder="Masukkan Nama Anda Disini" required />
 
         <label>Usia</label>
-        <input type="number" placeholder="Contoh: 20" required />
+        <input type="number" name="usia" placeholder="Contoh: 20" required />
 
         <label>Jenis Laptop / Komputer</label>
         <input
           type="text"
           placeholder="Contoh: Asus ROG, Acer Aspire, Lenovo IdeaPad"
+          name="jenis_laptop"
           required
         />
 
         <label>Alasan Menggunakan Sistem Pakar Ini</label>
         <textarea
           placeholder="Jelaskan permasalahan atau alasan Anda..."
+          name="alasan_penggunaan"
           required
         ></textarea>
 
-        <button type="submit">Lanjut ke Diagnosa</button>
+        <button type="submit">Lanjutkan Diagnosa</button>
       </form>
     </div>
+    <script src="./js_to_sql.js"></script>
   </body>
 </html>

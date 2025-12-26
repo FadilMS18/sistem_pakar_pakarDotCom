@@ -46,42 +46,88 @@ body {
 }
 
 /* HEADER */
-header {
+.navbar {
+    background: rgba(10, 25, 41, 0.3);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    backdrop-filter: blur(10px);
-    background: rgba(0, 0, 0, 0.45);
-    z-index: 1000;
+    padding: 15px 0;
 }
 
-header h1 {
-    font-size: 24px;
-    font-weight: 700;
-    background: linear-gradient(90deg, #ffa638, #ff6f1c);
-    -webkit-background-clip: text;
-    color: transparent;
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-nav a {
-    margin-left: 20px;
-    color: rgb(255, 255, 255);
-    font-weight: 600;
-    transition: 0.25s;
+.navbar-logo {
+    font-size: 1.3em;
+    filter: drop-shadow(0 0 10px rgba(255, 140, 66, 0.3));
 }
 
-nav a:hover {
-    color: #ff6a00;
+.navbar-title {
+    color: #ff8c42;
+    letter-spacing: 0.5px;
 }
 
+.navbar-menu {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    position: relative;
+}
+
+.navbar-link {
+    color: #8b9dc3;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar-link:hover {
+    color: #fff;
+    background: rgba(255, 140, 66, 0.1);
+}
+
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 5px;
+}
 /* HERO SECTION */
 .hero {
-    background: url(./assets/IMG/Hero-BG.jpg);
+    background: url(./assets/IMG/sep11.jpg);
     background-size: cover;
     position: relative;
     height: 100vh;
@@ -101,7 +147,7 @@ nav a:hover {
     width: 100%;
     top:0;
     bottom:0;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, .9));
+    background: rgba(0, 0, 0, .75);
     z-index: 0;
 }
 
@@ -124,6 +170,7 @@ nav a:hover {
 }
 
 .hero button {
+    font-family: outfit;
     margin-top: 30px;
     padding: 14px 28px;
     font-size: 18px;
@@ -186,15 +233,16 @@ nav a:hover {
 
 .fitur-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
 }
 
 .card {
     padding: 25px 30px;
     border-radius: 15px;
-    background: rgba(25, 33, 56);
-    box-shadow: 0 0px 15px rgba(255, 255, 255, .05);
+    background:rgba(25, 33, 56);
+    box-shadow: 0 0px 15px rgba(255, 255, 255, .15);
     transition: 0.3s;
     color: white;
     cursor: pointer;
@@ -207,7 +255,7 @@ nav a:hover {
 
 .card h4 {
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     background: linear-gradient(90deg, #ffa638, #ff6f1c);
     -webkit-background-clip: text;
     color: transparent;
