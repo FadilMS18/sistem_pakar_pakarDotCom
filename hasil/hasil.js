@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', function() {
   if (hasilData) {
     const data = JSON.parse(hasilData);
     const diagnosa = data.diagnosaUtama;
+    console.log(diagnosa)
     
     console.log('Data Diagnosa:', diagnosa); // Debug
     console.log('Answers:', data.answers); // Debug
@@ -412,7 +413,7 @@ function renderDiagnosaLainnya(diagnosaLainnya) {
     confidence.style.color = '#8b9dc3';
     confidence.style.marginBottom = '12px';
     confidence.style.paddingLeft = '30px';
-    confidence.textContent = `Tingkat Keyakinan: ${diagnosa.confidence}% (${diagnosa.jumlahCocok}/${diagnosa.totalGejala} gejala cocok)`;
+    confidence.textContent = `Kode Kerusakan: ${diagnosa.kd_kerusakan} `;
     card.appendChild(confidence);
     
     // Solusi
@@ -522,7 +523,7 @@ function tampilkanPesanKosong() {
   text.textContent = 'Silakan lakukan diagnosa terlebih dahulu untuk melihat hasil.';
   
   const button = document.createElement('a');
-  button.href = './user-form';
+  button.href = './../page-pertanyaan';
   button.className = 'btn btn-primary';
   button.style.textDecoration = 'none';
   button.style.display = 'inline-flex';

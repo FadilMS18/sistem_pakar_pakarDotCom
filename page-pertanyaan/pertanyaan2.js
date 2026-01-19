@@ -321,10 +321,18 @@ function lakukanDiagnosa(gejalaYa) {
 
   // Jika ada diagnosa yang cocok 100%
   if (diagnosaList.length > 0) {
-    // Urutkan berdasarkan jumlah gejala (terbanyak = paling spesifik)
-    diagnosaList.sort((a, b) => b.jumlahCocok - a.jumlahCocok);
+    // ============================================================
+    // PERUBAHAN UTAMA: Urutkan berdasarkan kode kerusakan (J1-J17)
+    // ============================================================
+    diagnosaList.sort((a, b) => {
+      const numA = parseInt(a.kd_kerusakan.replace('J', ''));
+      const numB = parseInt(b.kd_kerusakan.replace('J', ''));
+      return numA - numB; // J1, J2, J3, ... J17
+    });
     
-    // Diagnosa utama = yang paling spesifik (gejala terbanyak)
+    console.log("Urutan diagnosa setelah sorting:", diagnosaList.map(d => d.kd_kerusakan).join(', '));
+    
+    // Diagnosa utama = yang pertama berdasarkan urutan database
     const diagnosaUtama = diagnosaList[0];
     
     // Diagnosa lainnya = sisanya
@@ -333,8 +341,8 @@ function lakukanDiagnosa(gejalaYa) {
     // Jika ada multiple diagnosa, return keduanya
     if (diagnosaLainnya.length > 0) {
       console.log("⚠️ MULTIPLE DIAGNOSIS DETECTED!");
-      console.log("Diagnosa Utama:", diagnosaUtama.nama_kerusakan);
-      console.log("Diagnosa Lainnya:", diagnosaLainnya.map(d => d.nama_kerusakan));
+      console.log("Diagnosa Utama:", diagnosaUtama.nama_kerusakan, `(${diagnosaUtama.kd_kerusakan})`);
+      console.log("Diagnosa Lainnya:", diagnosaLainnya.map(d => `${d.nama_kerusakan} (${d.kd_kerusakan})`));
       
       return {
         diagnosaUtama: diagnosaUtama,
