@@ -22,7 +22,6 @@ body {
     background: linear-gradient(to right bottom, rgba(7, 9, 25), rgba(12, 16, 27));
     position: relative;
     min-height: 100vh;
-    padding: 1px;
 }
 
 .texture-bg{
@@ -216,4 +215,3 @@ button:hover {
     }
 }
 
-/* TO DO Add blob behind the container section to make the page a little bit more "alive" */

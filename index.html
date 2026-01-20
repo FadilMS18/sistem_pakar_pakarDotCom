@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
@@ -8,35 +8,27 @@
   </head>
   <body>
     <div class="texture-bg-home"></div>
-<nav class="navbar">
-        <div class="navbar-container">
-            <a href="#" class="navbar-brand">
-                <span class="navbar-logo">🔬</span>
-                <span class="navbar-title">Pakar Dotcom</span>
-            </a>
-            
-            <button class="navbar-toggle" id="navbar-toggle">
-                ☰
-            </button>
-            
-            <ul class="navbar-menu" id="navbar-menu">
-                <li class="navbar-item">
-                    <a href="#" class="navbar-link">
-                        🏠 Home
-                    </a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#about" class="navbar-link">
-                        📋 Tentang
-                    </a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#fitur" class="navbar-link ">
-                        🩺 Fitur
-                    </a>
-                </li>
-            </ul>
-        </div>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="#" class="navbar-brand">
+          <span class="navbar-logo">🔬</span>
+          <span class="navbar-title">Pakar Dotcom</span>
+        </a>
+
+        <button class="navbar-toggle" id="navbar-toggle">☰</button>
+
+        <ul class="navbar-menu" id="navbar-menu">
+          <li class="navbar-item">
+            <a href="#" class="navbar-link"> 🏠 Home </a>
+          </li>
+          <li class="navbar-item">
+            <a href="#about" class="navbar-link"> 📋 Tentang </a>
+          </li>
+          <li class="navbar-item">
+            <a href="#fitur" class="navbar-link"> 🩺 Fitur </a>
+          </li>
+        </ul>
+      </div>
     </nav>
     <!-- HERO -->
     <section class="hero" id="home">
@@ -129,9 +121,24 @@
       <div id="footer-navigation-menu">
         <h3>Kelompok 2</h3>
         <ul>
-          <li><a href="https://www.instagram.com/fadilms70?igsh=cjNybGh2eWtidHFh&utm_source=qr">Muh.Fadhil Malik Sukardi</a></li>
-          <li><a href="https://www.instagram.com/sukma1_xdr00?igsh=MXB0ZzR3djE0aDk1Zg%3D%3D&utm_source=qr">Sukmayani</a></li>
-          <li><a href="https://www.instagram.com/_rfkawlndri?igsh=OHloMmlwNXY3NWI0">Rifqa Wulandari</a></li>
+          <li>
+            <a
+              href="https://www.instagram.com/fadilms70?igsh=cjNybGh2eWtidHFh&utm_source=qr"
+              >Muh.Fadhil Malik Sukardi</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/sukma1_xdr00?igsh=MXB0ZzR3djE0aDk1Zg%3D%3D&utm_source=qr"
+              >Sukmayani</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/_rfkawlndri?igsh=OHloMmlwNXY3NWI0"
+              >Rifqa Wulandari</a
+            >
+          </li>
         </ul>
       </div>
     </footer>
@@ -144,7 +151,7 @@
             if (entry.isIntersecting) entry.target.classList.add("active");
           });
         },
-        { threshold: 0.2 }
+        { threshold: 0.2 },
       );
 
       document

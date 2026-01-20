@@ -82,11 +82,6 @@ body {
     background: rgba(255, 140, 66, 0.1);
 }
 
-.navbar-link.active {
-    color: #ff8c42;
-    background: rgba(255, 140, 66, 0.15);
-}
-
 .navbar-toggle {
     display: none;
     background: none;
@@ -342,16 +337,6 @@ body {
     color: #8b9dc3;
     font-size: 1rem;
     margin:5px 0 0 50px;
-}
-
-.qa-answer-badge {
-    padding: 6px 16px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 0.9em;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
 }
 
 /* Warning Box */
